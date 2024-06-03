@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: "/social-proof-section",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
     output: "export",
     reactStrictMode: true,
   };
