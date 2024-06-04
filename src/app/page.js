@@ -1,11 +1,13 @@
-import CustomImage from "./components/CustomImage";
+import Testimonial from "./components/Testimonial/Testimonial";
 
 export default function Home() {
   return (
-    <main>
-      <span style={{border: "solid 1px white", backgroundColor: "red"}}>
-      <CustomImage src="/next.svg" alt="Next.js logo" width={180} height={37} priority />
-      </span>
-      <p>Test</p>    </main>
+  <main>
+    <section>
+      <Testimonial/>
+      <Testimonial/>
+      <Testimonial/>
+    </section>
+      </main>
   );
 }
