@@ -1,8 +1,8 @@
 import CustomImage from "../CustomImage";
 import styles from './Testimonial.module.scss';
 
-export default function Testimonial() {
+export default function Testimonial({imageSrc, imageAlt}) {
   return <article className={styles.article}>
-  <CustomImage src="/next.svg" alt="Next.js logo" width={180} height={37} priority />
+  <CustomImage src={imageSrc} alt={imageAlt} width={100} height={100} priority />
   </article>
 }
