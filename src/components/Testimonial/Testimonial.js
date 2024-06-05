@@ -1,4 +1,4 @@
-import CustomImage from "../CustomImage";
+import CustomImage from "../CustomImage/CustomImage";
 import styles from './Testimonial.module.scss';
 
 export default function Testimonial({imageSrc, imageAlt}) {

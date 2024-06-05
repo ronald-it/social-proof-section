@@ -1,0 +1,84 @@
+// Variables
+
+// Colors
+
+// Primary
+$dark-purple: hsl(300, 43%, 22%);
+$pink: hsl(333, 80%, 67%);
+
+// Neutral
+$light-purple: hsl(303, 10%, 53%);
+$light-gray: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+// Breakpoints
+$tablet: 640px;
+$desktop: 1024px;
+
+// CSS Reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: 'League Spartan';
+    src: url('/fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 500 700;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  h6 {
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+// Mixin for tablet-specific styles
+// Applies styles when the viewport width is 640px or wider
+  @mixin for-tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+  }
+  
+// Mixin for desktop-specific styles
+// Applies styles when the viewport width is 1024px or wider
+  @mixin for-desktop {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }

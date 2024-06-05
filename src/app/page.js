@@ -1,4 +1,4 @@
-import Testimonial from "./components/Testimonial/Testimonial";
+import Testimonial from "../components/Testimonial/Testimonial";
 
 export default function Home() {
   return (
