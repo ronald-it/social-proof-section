@@ -1,3 +1,43 @@
-.article {
+@import "../../styles/variables.scss";
+
+.testimonial {
+    background-color: $dark-purple;
+    padding: 2rem 2.5rem;
+    border-radius: 0.5rem;
+    line-height: 1.25rem;
+
+    &__header {
+        display: flex;
+        margin-bottom: 1.5rem;
+    }
+
+    &__image {
+        border-radius: 9999px;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &__info {
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__name {
+        margin-bottom: 0.2rem;
+        color: $white;
+    }
+
+    &__status {
+        color: $pink;
+    }
+
+    &__quote {
+        color: $white;
+    }
+}
+
+.article * {
     border: solid 1px black;
 }

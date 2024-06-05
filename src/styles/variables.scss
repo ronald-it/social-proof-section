@@ -1,0 +1,32 @@
+// Variables
+
+// Colors
+
+// Primary
+$dark-purple: hsl(300, 43%, 22%);
+$pink: hsl(333, 80%, 67%);
+
+// Neutral
+$light-purple: hsl(303, 10%, 53%);
+$light-gray: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+// Breakpoints
+$tablet: 640px;
+$desktop: 1024px;
+
+// Mixin for tablet-specific styles
+// Applies styles when the viewport width is 640px or wider
+@mixin for-tablet {
+    @media (min-width: #{$tablet}) {
+      @content;
+    }
+  }
+  
+// Mixin for desktop-specific styles
+// Applies styles when the viewport width is 1024px or wider
+  @mixin for-desktop {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }

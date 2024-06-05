@@ -1,21 +1,4 @@
-// Variables
-
-// Colors
-
-// Primary
-$dark-purple: hsl(300, 43%, 22%);
-$pink: hsl(333, 80%, 67%);
-
-// Neutral
-$light-purple: hsl(303, 10%, 53%);
-$light-gray: hsl(300, 24%, 96%);
-$white: hsl(0, 0%, 100%);
-
-// Breakpoints
-$tablet: 640px;
-$desktop: 1024px;
-
-// CSS Reset
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -24,6 +7,7 @@ $desktop: 1024px;
   padding: 0;
 }
 
+/* Font declaration */
 @font-face {
     font-family: 'League Spartan';
     src: url('/fonts/LeagueSpartan-VariableFont_wght.ttf') format('truetype');
@@ -65,20 +49,4 @@ $desktop: 1024px;
   h6 {
     font-size: 0.875rem;
     font-weight: 400;
-  }
-
-// Mixin for tablet-specific styles
-// Applies styles when the viewport width is 640px or wider
-  @mixin for-tablet {
-    @media (min-width: #{$tablet}) {
-      @content;
-    }
-  }
-  
-// Mixin for desktop-specific styles
-// Applies styles when the viewport width is 1024px or wider
-  @mixin for-desktop {
-    @media (min-width: #{$desktop}) {
-      @content;
-    }
   }
