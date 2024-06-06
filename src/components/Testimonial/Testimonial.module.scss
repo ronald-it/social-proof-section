@@ -5,7 +5,6 @@
     padding: 2rem 2.5rem;
     border-radius: 0.5rem;
     line-height: 1.25rem;
-    margin-bottom: 1rem;
 
     &__header {
         display: flex;
@@ -28,6 +27,7 @@
     &__name {
         margin-bottom: 0.2rem;
         color: $white;
+        font-weight: bold;
     }
 
     &__status {
@@ -39,6 +39,6 @@
     }
 }
 
-.article * {
-    border: solid 1px black;
+.testimonial:nth-of-type(even) {
+    margin: 1rem 0;
 }

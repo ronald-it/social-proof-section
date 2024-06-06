@@ -2,7 +2,6 @@
 
 .review-card {
     background-color: $light-gray;
-    margin-bottom: 1rem;
     padding: 1rem 0;
     border-radius: 0.5rem;
     display: flex;
@@ -23,4 +22,8 @@
         font-weight: bold;
         color: $dark-purple;
     }
+}
+
+.review-card:nth-of-type(even) {
+    margin: 1rem 0;
 }
