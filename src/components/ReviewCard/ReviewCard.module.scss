@@ -1,0 +1,26 @@
+@import "../../styles/variables.scss";
+
+.review-card {
+    background-color: $light-gray;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__rating {
+        margin-bottom: 0.5rem;
+    }
+
+    &__image {
+        height: 1rem;
+        width: 1rem;
+        margin: 0 0.2rem;
+    }
+
+    &__text {
+        font-weight: bold;
+        color: $dark-purple;
+    }
+}
