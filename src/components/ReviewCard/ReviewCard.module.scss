@@ -8,6 +8,14 @@
     flex-direction: column;
     align-items: center;
 
+    @include for-desktop {
+        height: 3.5rem;
+        padding: 0 0 0 0.75rem;
+        width: 80%;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
     &__rating {
         margin-bottom: 0.5rem;
     }
@@ -22,8 +30,27 @@
         font-weight: bold;
         color: $dark-purple;
     }
+
+    &__rating, &__text {
+        @include for-desktop {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0 0.75rem;
+        }
+    }
+}
+
+.review-card:first-child {
+    @include for-desktop {
+        align-self: flex-start;
+    }
 }
 
 .review-card:nth-of-type(even) {
     margin: 1rem 0;
+
+    @include for-desktop {
+        align-self: center;
+    }
 }

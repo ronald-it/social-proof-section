@@ -7,16 +7,18 @@ export default function Home() {
   return (
   <main className={styles.main}>
     <div className={styles.main__grid}>
-      <div className={styles.main__header}>
-        <h1 className={styles.main__title}>10,000+ of our users love our products.</h1>
-        <p className={styles.main__description}>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+      <div className={styles['main__content-wrapper']}>
+        <section className={styles.main__header}>
+          <h1 className={styles.main__title}>10,000+ of our users love our products.</h1>
+          <p className={styles.main__description}>We only provide great products combined with excellent customer service. See what our satisfied customers are saying about our services.</p>
+          </section>
+          <section className={styles['main__review-cards']}>
+            <ReviewCard reviewPlatform="Reviews"/>
+            <ReviewCard reviewPlatform="Report Guru"/>
+            <ReviewCard reviewPlatform="BestTech"/>
+          </section>
       </div>
-      <section>
-        <ReviewCard reviewPlatform="Reviews"/>
-        <ReviewCard reviewPlatform="Report Guru"/>
-        <ReviewCard reviewPlatform="BestTech"/>
-      </section>
-      <section>
+      <section className={styles.main__testimonials}>
         <Testimonial
         imageSrc="/images/image-colton.jpg"
         imageAlt="Picture of Colton"

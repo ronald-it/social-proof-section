@@ -5,6 +5,7 @@
     padding: 2rem 2.5rem;
     border-radius: 0.5rem;
     line-height: 1.25rem;
+    height: min-content;
 
     &__header {
         display: flex;
@@ -39,6 +40,16 @@
     }
 }
 
+.testimonial:first-child {
+    @include for-desktop {
+        margin-top: -2rem;
+    }
+}
+
 .testimonial:nth-of-type(even) {
     margin: 1rem 0;
+
+    @include for-desktop {
+        margin: -1rem 0 0 0;
+    }
 }
