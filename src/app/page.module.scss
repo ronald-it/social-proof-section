@@ -3,6 +3,8 @@
 .main {
     padding: 5rem 1.5rem;
     position: relative;
+    display: flex;
+    justify-content: center;
 
     @include for-desktop {
         height: 100vh;
@@ -22,6 +24,7 @@
         display: grid;
         grid: repeat(3, 1fr) / min;
         grid-row-gap: 3rem;
+        max-width: 330px;
 
         @include for-desktop {
             max-width: 1200px;
