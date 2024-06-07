@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { Metadata } from 'next'
+import FontLoader from './FontLoader';
 
 export const metadata = {
   title: "Social proof section",
@@ -12,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <FontLoader/>
+      </head>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
