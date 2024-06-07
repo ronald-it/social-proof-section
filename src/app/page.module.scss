@@ -107,8 +107,22 @@
         }
     }
 
-    &__pattern-image--top, &__pattern-image--bottom {
+    &__pattern-image--mobile-top, &__pattern-image--mobile-bottom {
         width: 100%;
         height: 100%;
+
+        @include for-desktop {
+            display: none;
+        }
+    }
+
+    &__pattern-image--desktop-top, &__pattern-image--desktop-bottom {
+        width: 100%;
+        height: 100%;
+        display: none;
+
+        @include for-desktop {
+            display: block;
+        }
     }
 }

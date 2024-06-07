@@ -37,10 +37,12 @@ export default function Home() {
       </section>
     </div>
     <span className={styles['main__pattern-container--top']}>
-      <CustomImage className={styles['main__pattern-image--top']} src="/images/bg-pattern-top-mobile.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
+      <CustomImage className={styles['main__pattern-image--mobile-top']} src="/images/bg-pattern-top-mobile.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
+      <CustomImage className={styles['main__pattern-image--desktop-top']} src="/images/bg-pattern-top-desktop.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
     </span>
     <span className={styles['main__pattern-container--bottom']}>
-      <CustomImage className={styles['main__pattern-image--bottom']} src="/images/bg-pattern-bottom-mobile.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
+      <CustomImage className={styles['main__pattern-image--mobile-bottom']} src="/images/bg-pattern-bottom-mobile.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
+      <CustomImage className={styles['main__pattern-image--desktop-bottom']} src="/images/bg-pattern-bottom-desktop.svg" alt="Top background pattern mobile" width={100} height={100} priority/>
     </span>
   </main>
   );
