@@ -1,91 +1,170 @@
-# Frontend Mentor - Social proof section
+# Frontend Mentor - Social proof section solution
 
-![Design preview for the Social proof section coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Social proof section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+### The challenge
 
-## The challenge
+The challenge was to build a static HTML page to test my skills in Grid and Flexbox, and to make it responsive for both mobile and desktop (not for tablet). The user can't interact with it, as it's meant to showcase a testimonial section for viewing purposes.
 
-Your challenge is to build out this social proof section and get it looking as close to the design as possible.
+### Screenshot
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+![Mobile design](/public/images/social-proof-section-mobile.png)
 
-Your users should be able to:
+![Desktop design](/public/images/social-proof-section-desktop.png)
 
-- View the optimal layout for the section depending on their device's screen size
+### Links
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+- Solution URL: [https://github.com/ronald-it/social-proof-section](https://github.com/ronald-it/social-proof-section)
+- Live Site URL: [https://ronald-it.github.io/social-proof-section/](https://ronald-it.github.io/social-proof-section/)
 
-## Where to find everything
+## My process
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Built with
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Semantic HTML5 markup
+- CSS (globals) and SCSS (modules and variables) for styling
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For FontLoader component
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+### What I learned
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+In this project, I chose to practice CSS Grid after completing the Grid Critters game. I used Grid for both the mobile and desktop designs, but the implementation was relatively straightforward. While I demonstrated that I can set up a simple grid in CSS, I plan to take on more complex challenges to further hone my Grid skills.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+Regarding CSS, everything felt natural to me, and there wasn't much new to learn. However, I did learn how to correctly deploy this challenge on GitHub Pages. This involved creating a FontLoader component to handle the base path for the font declaration and configuring the base path in the Next.js configuration. Ensuring that images are displayed correctly on both localhost and GitHub Pages was another important aspect I addressed. This required setting the base path in a custom image component.
 
-## Building your project
+Additionally, this was the first time in a long while that I used standard CSS and SCSS instead of Tailwind. I refreshed my knowledge of SCSS, including concepts like BEM (Block Element Modifier), nesting, using & for BEM naming, mixins, breakpoints, and variables.
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+```css
+/* 1. SCSS code for a responsive grid layout */
+.main {
+  &__grid {
+    display: grid;
+    grid: repeat(3, 1fr) / min;
+    grid-row-gap: 3rem;
+  }
+}
+```
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+```scss
+/* 2. Example of SCSS nesting and BEM */
+.main {
+  padding: 5rem 1.5rem;
 
-## Deploying your project
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+  &__title {
+    color: $dark-purple;
+    text-align: center;
+  }
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+  &__description {
+    color: $light-purple;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+```scss
+/* 3. Variables and mixins in SCSS */
 
-## Create a custom `README.md`
+// Colors
+$dark-purple: hsl(300, 43%, 22%);
+$pink: hsl(333, 80%, 67%);
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+// Breakpoints
+$desktop: 1440px;
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+// Mixin for desktop-specific styles
+@mixin for-desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+```js
+// 4. Snippet from FontLoader component
+useEffect(() => {
+  const fontUrl = `${basePath}/fonts/LeagueSpartan-VariableFont_wght.ttf`;
 
-## Submitting your solution
+  const style = document.createElement("style");
+  style.textContent = `
+    @font-face {
+      font-family: 'League Spartan';
+      src: url('${fontUrl}') format('truetype');
+      font-weight: 400 500 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  `;
+  document.head.appendChild(style);
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+  return () => {
+    document.head.removeChild(style);
+  };
+}, []);
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+```js
+// 5. Setting base path in CustomImage
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-## Sharing your solution
+return <Image {...props} src={`${basePath}${src}`} alt={alt} />;
+```
 
-There are multiple places you can share your solution:
+```js
+// 6. Next.js configuration for correct base path on GitHub Pages
+const nextConfig = {
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  reactStrictMode: true,
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: process.env.NODE_ENV === 'production' ? '/social-proof-section' : '',
+  },
+};
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+module.exports = nextConfig;
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### Continued development
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+Advanced CSS Grid and Flexbox: While I have a good grasp of the basics, I want to explore more complex layouts and responsive design patterns using CSS Grid and Flexbox.
 
-## Got feedback for us?
+JavaScript for Interactivity: In this project, I used JavaScript primarily for configuration and to get the GitHub Pages deployment working. However, in future projects, I want to use JavaScript to add interactivity to the page itself, making it dynamic and responsive to user actions.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Tailwind CSS: For my next project, I plan to use Tailwind CSS to compare its utility-first approach with my experience using standard CSS and SCSS. This will help me understand the benefits and trade-offs of using utility-first CSS frameworks.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+### Useful resources
 
-**Have fun building!** 🚀
+- [Flexbox Zombies](https://mastery.games/flexboxzombies/) - This interactive game helped me understand Flexbox in a fun and engaging way. I really liked this learning method and will use similar resources going forward.
+- [Grid Critters](https://gridcritters.com/) - This is an amazing game which helped me finally understand CSS Grid. I'd recommend it to anyone still learning this concept.
+
+## Author
+
+- Github - [ronald-it](https://github.com/ronald-it)
+- Frontend Mentor - [ronald-it](https://www.frontendmentor.io/profile/ronald-it)
